@@ -1,0 +1,52 @@
+<!--Table-->
+<h3> HistoryBoard</h3>
+<table class="table table-striped w-auto">
+
+  <!--Table head-->
+  <thead>
+  <tr>
+    <th>#</th>
+    <th>Coin</th>
+    <th>ISDN</th>
+    <th>Description</th>
+    <th>TimeStamp</th>
+    <th>Country</th>
+    <th>Price</th>
+    <th>Position</th>
+    <th>Delta</th>
+    <th>Status</th>
+    <th>Detail</th>
+    <th>alarm</th>
+    <th>action</th>
+    <th>online</th>
+  </tr>
+  </thead>
+  <!--Table head-->
+
+  <!--Table body-->
+  <tbody>
+  <tr *ngFor=" let asset of getAssets()" class="table-hover" (click)="clicker(asset)">
+    <td>{{asset.id}} </td>
+    <td>{{asset.name}} </td>
+    <td>{{asset.description}} </td>
+    <td>{{asset.position}} </td>
+    <td>{{asset.status}} </td>
+    <td>{{asset.currTimestamp}} </td>
+    <td>{{asset.weight}} </td>
+    <td>{{asset.price}} </td>
+    <td>{{asset.delta}} </td>
+    <td>{{asset.change}} </td>
+    <td><fa-icon [icon]="faCoffee"></fa-icon></td>
+    <td><fa-icon [icon]="faBell"></fa-icon></td>
+    <td><fa-icon [icon]="faUser"></fa-icon></td>
+    <td> <div class="spinner-grow" role="status">
+      <span class="sr-only">Loading...</span>
+    </div></td>
+  </tr>
+
+  </tbody>
+  <!--Table body-->
+
+
+</table>
+<!--Table-->

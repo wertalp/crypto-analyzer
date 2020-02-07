@@ -1,0 +1,20 @@
+<div  *ngIf="edited"class="detailView">
+<h3> Detail Componente</h3>
+  <hr>
+  <div class="row">
+    <div class="btn-group-vertical float-left">
+      <button type="button" class="btn btn-outline-secondary">ID {{currentStock.position}}</button>
+      <button type="button" class="btn btn-info ">Name {{currentStock.name}}</button>
+      <button type="button" class="btn btn-outline-secondary">DESC {{currentStock.description}}</button>
+      <button type="button" class="btn btn-outline-secondary">Country {{currentStock.country}}</button>
+      <button type="button" class="btn btn-warning">PREIS {{currentStock.price}}</button>
+      <button type="button" class="btn btn-outline-secondary">DELTA {{currentStock.delta}}</button>
+    </div>
+  </div>
+  <div class="row">
+    <button type="submit" class="btn-danger float-right">Abonieren</button>
+    <button type="submit" class="btn-info float-right">Abmelden</button>
+  </div>
+
+
+</div>

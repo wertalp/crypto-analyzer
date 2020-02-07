@@ -1,0 +1,9 @@
+table {
+  border: black solid;
+  margin-top: 25px ;
+  margin-left: 30px;
+}
+
+table.w-auto tr:hover td {
+  background-color: #f9fe47;
+}
