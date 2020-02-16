@@ -2,7 +2,7 @@ export interface IAsset {
   id  : number ;
   name: string ;
   description: string ;
-  currTimestamp: string ;
+  currTimestamp: Date ;
   country: string;
   position: number;
   price:  any ;

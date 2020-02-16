@@ -1,6 +1,5 @@
 <!--Table-->
-<h3> HistoryBoard</h3>
-<table class="table table-striped w-auto">
+<table class="table table-striped table-hover table-bordered w-auto">
 
   <!--Table head-->
   <thead>
@@ -8,17 +7,14 @@
     <th>#</th>
     <th>Coin</th>
     <th>ISDN</th>
-    <th>Description</th>
-    <th>TimeStamp</th>
     <th>Country</th>
     <th>Price</th>
-    <th>Position</th>
-    <th>Delta</th>
     <th>Status</th>
-    <th>Detail</th>
-    <th>alarm</th>
-    <th>action</th>
+    <th>Action</th>
     <th>online</th>
+    <th>Generate </th>
+    <th>Export</th>
+    <th>Abmelden</th>
   </tr>
   </thead>
   <!--Table head-->
@@ -30,18 +26,15 @@
     <td>{{asset.name}} </td>
     <td>{{asset.description}} </td>
     <td>{{asset.position}} </td>
-    <td>{{asset.status}} </td>
-    <td>{{asset.currTimestamp}} </td>
-    <td>{{asset.weight}} </td>
     <td>{{asset.price}} </td>
-    <td>{{asset.delta}} </td>
     <td>{{asset.change}} </td>
-    <td><fa-icon [icon]="faCoffee"></fa-icon></td>
-    <td><fa-icon [icon]="faBell"></fa-icon></td>
     <td><fa-icon [icon]="faUser"></fa-icon></td>
     <td> <div class="spinner-grow" role="status">
       <span class="sr-only">Loading...</span>
     </div></td>
+    <td> <button (click)="generatePdf(asset)" class="btn-outline-dark">Generate PDF</button></td>
+    <td> <button (click)="generatePdf(asset)" class="btn-outline-dark">XLS</button></td>
+    <td> <button (click)="abmelden(asset)" class="btn-danger"> ABMELDEN</button></td>
   </tr>
 
   </tbody>

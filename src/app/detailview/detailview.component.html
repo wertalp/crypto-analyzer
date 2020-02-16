@@ -1,20 +1,48 @@
 <div  *ngIf="edited"class="detailView">
-<h3> Detail Componente</h3>
+<h3> Detail {{currentStock.name}}</h3>
   <hr>
   <div class="row">
-    <div class="btn-group-vertical float-left">
-      <button type="button" class="btn btn-outline-secondary">ID {{currentStock.position}}</button>
-      <button type="button" class="btn btn-info ">Name {{currentStock.name}}</button>
-      <button type="button" class="btn btn-outline-secondary">DESC {{currentStock.description}}</button>
-      <button type="button" class="btn btn-outline-secondary">Country {{currentStock.country}}</button>
-      <button type="button" class="btn btn-warning">PREIS {{currentStock.price}}</button>
-      <button type="button" class="btn btn-outline-secondary">DELTA {{currentStock.delta}}</button>
+    <div class="btn-group-vertical ">
+
+      <div class="btn-group">
+
+      <button type="button" class="btn btn-outline-secondary">ID</button>
+      <button type="button" class="btn btn-outline-secondary"> {{currentStock.id}}</button>
+
+      </div>
+
+      <div class="btn-group">
+      <button type="button" class="btn btn-info ">Name</button>
+      <button type="button" class="btn btn-info "> {{currentStock.name}}</button>
+      </div>
+      <div class="btn-group">
+        <button type="button" class="btn btn-outline-secondary">DESC</button>
+        <button type="button" class="btn btn-outline-secondary">{{currentStock.description}}</button>
+
+      </div>
+      <div class="btn-group">
+        <button type="button" class="btn btn-outline-secondary">Country</button>
+        <button type="button" class="btn btn-outline-secondary">{{currentStock.country}}</button>
+      </div>
+      <div class="btn-group">
+        <button type="button" class="btn btn-outline-secondary">DELTA </button>
+        <button type="button" class="btn btn-outline-secondary">{{currentStock.delta}}</button>
+      </div>
+      <div class="btn-group">
+        <button type="button" class="btn btn-outline-dark">PREIS</button>
+        <button type="button" class="btn btn-outline-success">{{currentStock.price}}</button>
+      </div>
+  </div>
+    <div class="input-group actionBox">
+      <button (click)="abonnieren(currentStock)" type="submit" class="btn-info float-right">Abonieren</button>
+      <button type="submit" class="btn-info float-right">Abmelden</button>
     </div>
+
   </div>
-  <div class="row">
-    <button type="submit" class="btn-danger float-right">Abonieren</button>
-    <button type="submit" class="btn-info float-right">Abmelden</button>
+  <div [hidden]="hided"class="alert alert-success" role="alert">
+    <h4> ABBO for {{currentStock.name}} </h4>
+  </div>
   </div>
 
 
-</div>
+

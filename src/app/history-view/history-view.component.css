@@ -2,9 +2,9 @@ table {
   border: black solid;
   margin-top: 25px ;
   margin-left: 30px;
-  background-color: #18ff0a;
+
 }
 
 table.w-auto tr:hover td {
-  background-color: #57c0fe;
+  background-color: #f0f1ea;
 }
